@@ -1,0 +1,144 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-image: url("unite-lifestyle-blend.png");
+  background-size: cover;
+}
+
+footer {
+  height: 15%;
+  margin: 0;
+  overflow: auto;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  text-align: right;
+}
+
+nav {
+  height: 5%;
+}
+
+nav, footer {
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  height: calc(100% - 20%);
+  border-spacing: 2vw;
+  border-collapse: separate;
+  margin: 0;
+  overflow: auto;
+  color: #fff;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+video {
+  position: absolute;
+  left: 0px;
+  top: 0px
+}
+
+main .right {
+  display: table-cell;
+  border-radius: 2px;
+  background: #fff;
+}
+
+main .right {
+  position: absolute;
+  background: rgba(0, 70, 108, 0.99);
+  width: 28vw;
+  height: 16vw;
+  float: right;
+  overflow: hidden;
+  text-align: left;
+  padding: 2vw;
+  left: 60.5vw;
+  top: 4vw;
+  box-shadow: 1px 2px 3px #53565a;
+}
+
+main .iframe {
+  position: absolute;
+  width: 30vw;
+  height: 16vw;
+  float: right;
+  overflow: hidden;
+  text-align: left;
+  padding: 2vw;
+  left: 58.5vw;
+  top: 25vw;
+}
+
+main .logo-bar img {
+  height: auto;
+  width: 9vw;
+  margin: 0.3vw;
+  vertical-align: middle;
+  padding-top: 2px;
+}
+
+.time {
+  position: absolute;
+  right: 2%;
+  bottom: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.75vw;
+  text-align: right;
+  text-shadow: 0 0 5px #000000;
+  opacity: 0.8;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  position: absolute;
+  color: #FFFFFF;
+  right: 10%;
+  bottom: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  opacity: 1.0;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.pin-bar {
+  background-color: #d9d9d9;
+  color: #0071c5;
+  font-weight: bold;
+  border-radius: 2px;
+  box-shadow: 1px 2px 3px #53565a;
+  position: absolute;
+  top: 19.5vw;
+  left: 60.5vw;
+  float: right;
+  width: 32vw;
+  height: 4.5vw;
+  text-align: center;
+  font-size: 4vw;
+}
+
+.logo-bar {
+  background-color: #d9d9d9;
+  border-radius: 2px;
+  box-shadow: 1px 2px 3px #53565a;
+  position: absolute;
+  top: 4vw;
+  left: 60.5vw;
+  float: right;
+  width: 32vw;
+  height: 3vw;
+}
+
+.instructions-text {
+  font-size: 2vw;
+  padding: 0.1vw;
+  margin-top: 0vw;
+  margin-bottom: 6vw;
+}
