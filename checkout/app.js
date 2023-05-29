@@ -3,8 +3,7 @@ var payButton = document.getElementById("pay-button");
 var form = document.getElementById("payment-form");
 var errorStack = [];
 
-//Frames.init("pk_test_8ac41c0d-fbcc-4ae3-a771-31ea533a2beb");
-Frames.init("pk_sbox_umiq2sh7fjh3focxqg5i7esrgqu");
+Frames.init("pk_test_8ac41c0d-fbcc-4ae3-a771-31ea533a2beb");
 
 Frames.addEventHandler(
   Frames.Events.CARD_VALIDATION_CHANGED,
