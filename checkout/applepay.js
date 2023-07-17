@@ -2,7 +2,7 @@ var MECHAT_ID = "merchant.com.magentostore.dev";
 var BACKEND_URL_VALIDATE_SESSION = window.location.href + "validateSession";
 var BACKEND_URL_PAY = window.location.href + "pay";
 
-var appleButton = document.querySelection(".apple-pay-button");
+var appleButton = document.querySelector(".apple-pay-button");
 
 //check if apple pay is available
 if (window.ApplePaySession && ApplePaySession.canMakePaymentsWithActiveCard(MECHAT_ID)) {
