@@ -34,9 +34,14 @@ appleButton.addEventListener("click", function () {
 
     applePaySession.begin();
 
-    //applePaySession.onvalidateMerchant = function(event) {
-
-    //};
+    // This is the first event that Apple triggers. Here you need to validate the 
+    // Apple Pay Session from your Back-End
+    applePaySession.onvalidateMerchant = function(event) {
+        var theValidationURL = event.ValidateionURL;
+        validateTheSession(theValidationURL, function(merchantSession){
+            applePaySession.completeMerchantValidation(merchantSession);
+        });
+    };
 
     //applePaySession.onpaymentauthorized = function(event) {
 
