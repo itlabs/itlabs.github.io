@@ -7,7 +7,7 @@ var BACKEND_URL_PAY = window.location.href + "pay";
 var appleButton = document.querySelection(".apple-pay-button");
 
 //check if apple pay is available
-if (window.ApplePaySession && ApplePaySession.canMakePaymentsWithActiveCard(MECHAT_ID) {
+if (window.ApplePaySession && ApplePaySession.canMakePaymentsWithActiveCard(MECHAT_ID)) {
     appleButton.style.display = "block";
 }
 
