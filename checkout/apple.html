@@ -15,20 +15,5 @@ apple-pay-button {
 <body>
 <apple-pay-button buttonstyle="black" type="plain" locale="zh-CN"></apple-pay-button>
 <script src="applepay.js"></script>
-<script>
-var request = {
-        countryCode: 'US',
-        currencyCode: 'USD',
-        supportedNetworks: ['visa', 'masterCard', 'amex', 'discover'],
-        merchantCapabilities: ['supports3DS'],
-        total: {
-            label: 'Your Merchant Name',
-            amount: '10.00'
-        },
-    }
-    var session = new ApplePaySession(3, request);
-		
-	session.begin();
-</script>
 </body>
 </html>
