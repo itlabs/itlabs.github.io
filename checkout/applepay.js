@@ -1,5 +1,3 @@
-const { AlexaForBusiness } = require("aws-sdk");
-
 var MECHAT_ID = "merchant.com.magentostore.dev";
 var BACKEND_URL_VALIDATE_SESSION = window.location.href + "validateSession";
 var BACKEND_URL_PAY = window.location.href + "pay";
