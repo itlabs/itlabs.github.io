@@ -1,3 +1,5 @@
+const { AlexaForBusiness } = require("aws-sdk");
+
 var MECHAT_ID = "merchant.com.magentostore.dev";
 var BACKEND_URL_VALIDATE_SESSION = window.location.href + "validateSession";
 var BACKEND_URL_PAY = window.location.href + "pay";
@@ -29,7 +31,7 @@ appleButton.addEventListener("click", function () {
         currencyCode: "USD",
         supportedNetworks: ["visa", "masterCard", "amex", "discover"],
         merchantCapabilities: ["supports3DS"],
-        total: { label: " Amazing Shop ", amount: " 10.00 " }
+        total: { label: "Amazing Shop", amount: "10.00" }
     });
 
     applePaySession.begin();
@@ -41,6 +43,25 @@ appleButton.addEventListener("click", function () {
         validateTheSession(theValidationURL, function(merchantSession){
             applePaySession.completeMerchantValidation(merchantSession);
         });
+    };
+
+    var validateTheSession = function(theValidationURL, callback) {
+        //we send the validation URL to our backend
+        axios 
+            .post(
+                BACKEND_URL_VALIDATE_SESSION,
+                {
+                    appleUrl: theValidationURL
+                },
+                {
+                    headers: {
+                        "Access-Control-Allow-Origin": "*"
+                    }
+                }
+            )
+            .then(function(response) {
+                callback(response.data);
+            });
     };
 
     //applePaySession.onpaymentauthorized = function(event) {
